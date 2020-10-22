@@ -1,5 +1,5 @@
 %plots the temperature fluctuations from your AIMD simulations 
-%AIMD simulation data is taken from vasp.out using 'grep E0 vasp.out | awk '{print $9}'' in BASH
+%AIMD simulation data is taken from vasp.out using 'grep E0 vasp.out | awk '{print $3}'' in BASH
 %I read in the data for T01, T02, etc. using the data.m script (also in this branch).
 
 %subplot title
