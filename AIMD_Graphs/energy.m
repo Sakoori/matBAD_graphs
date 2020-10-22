@@ -1,3 +1,8 @@
+%plots the energy from your AIMD simulations 
+%AIMD simulation data is taken from vasp.out using 'grep E0 vasp.out | awk '{print $9}'' in BASH
+%I read in the data for E01, E02, etc. using the data.m script (also in this branch).
+
+%subplot title
 sgtitle('\fontsize{22}Be on Ag Surface: Energy Over Simulation Time')
 
 h1 = subplot(2,2,1);
@@ -33,8 +38,10 @@ hold on
 yline(avg4);
 title('Simulation 4')
 
+%makes all the y axes the same so you can compare things
 linkaxes([h1, h2, h3, h4], 'y')
 
+%comment this out if your subplot axes are different
 p1=get(h1,'position');
 p2=get(h2,'position');
 p3=get(h3,'position');
