@@ -1,3 +1,7 @@
+%plots the temperature fluctuations from your AIMD simulations 
+%AIMD simulation data is taken from vasp.out using 'grep E0 vasp.out | awk '{print $9}'' in BASH
+%I read in the data for T01, T02, etc. using the data.m script (also in this branch).
+
 %subplot title
 sgtitle('\fontsize{22}Andersen Probability Test: Temperature Over Simulation Time')
 
@@ -35,10 +39,11 @@ hold on
 yline(avg4);
 title('andersen\_prob = 0.3')
 
-%links axes together so they're consistent
+%links axes together so they're consistent and so you can properly compare things with the right scale
 linkaxes([h1, h2, h3, h4], 'y')
 
 %for configuring x and y axes
+%comment out these lines if your scales are different units/require different labels. this example has the same x and y so this is what controls it
 p1=get(h1,'position');
 p2=get(h2,'position');
 p3=get(h3,'position');
