@@ -1,5 +1,12 @@
+%this script reads in data from an Excel spreadsheet
+%data can be collected from vasp.out or OUTCAR
+%make sure when you paste the data in, you put it in the right columns, otherwise you'll need to reconfigure the cells
+%change the cells it reads in depending on what your range is
+%the data ranges have to be the same length as your time otherwise you'll get MATLAB errors because it doesn't know what to do with jagged vectors/matrices
+%eventually I'll figure out how to circumvent that
+
 filename = 'data.xlsx';
-%xlsread('excel file', 'sheet', 'columns')
+%xlsread('excel file', 'sheet', 'column cells')
 time = xlsread('data.xlsx', 'Andersen Tests', 'A3:A75');
 
 %energy
