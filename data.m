@@ -1,4 +1,5 @@
 %this script reads in data from an Excel spreadsheet
+%Excel spreadsheet NEEDS to be in the same folder/directory as these scripts, otherwise you'll get an error because it can't find the data
 %data can be collected from vasp.out or OUTCAR
 %make sure when you paste the data in, you put it in the right columns, otherwise you'll need to reconfigure the cells
 %change the cells it reads in depending on what your range is
