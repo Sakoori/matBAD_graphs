@@ -1,5 +1,11 @@
+%used to read in ion-surface distance over time
+%this script is niche and only really for people studying ion adsorption over time or things of that nature
+%data for B01, B02, etc is read in through data.m
+
+%subplot title
 sgtitle('\fontsize{22}Be on Ag Surface: Ion-Surface Distance Over Simulation Time')
 
+%subplot(number of plots in x direction, plots in y direction, plot number)
 h1 = subplot(2,2,1);
 x = time;
 y1 = B01;
@@ -33,8 +39,10 @@ hold on
 yline(avg4);
 title('Simulation 4')
 
+%makes all of your y axes the same so you can compare data better
 linkaxes([h1, h2, h3, h4], 'y')
 
+%comment these out if your axes for each individual subplot is different
 p1=get(h1,'position');
 p2=get(h2,'position');
 p3=get(h3,'position');
